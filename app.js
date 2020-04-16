@@ -6,6 +6,7 @@ const TestComponent = () => (
   <h1>I am dynamically added!</h1>
 )
 window.addEventListener('load', function () {
+	console.log('loaded')
   // Specifies the element we want to watch
   const watch = document.getElementById('target-test');
 
