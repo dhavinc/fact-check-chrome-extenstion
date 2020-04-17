@@ -66,11 +66,23 @@
 }
 
 .loading {
-  width: 50%;
+  display: inline-block;
 }
 .loading:after {
   content: ' .';
   animation: dots 1s steps(5, end) infinite;
+}
+.mr-1 {
+    margin-right: 8px;
+}
+.mr-2 {
+    margin-right: 16px;
+}
+.mr-3 {
+    margin-right: 24px;
+}
+.result-container {
+    display: flex;
 }
 /* 
     loading animation

@@ -9,6 +9,7 @@
     "build-prod": "webpack -p --mode production"
   },
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "jquery": "^3.5.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
@@ -20,7 +21,9 @@
     "@babel/preset-react": "latest",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.5.2",
+    "file-loader": "^6.0.0",
     "style-loader": "^1.1.4",
+    "ttf-loader": "^1.0.2",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
   },

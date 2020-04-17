@@ -2,10 +2,16 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import './app.css';
+import 'font-awesome/css/font-awesome.min.css'; // font awesome
 // Component to inject on select
 class App extends Component {
-  loaded = false;
-  data;
+  constructor() {
+    super();
+    this.state = {
+      loaded: false,
+      data: null,
+    };
+  }
   sendSelection() {
     $.post(
       'http://localhost:4200',
@@ -13,9 +19,8 @@ class App extends Component {
         term: this.props.selection,
       },
       (data, status) => {
-        console.log('data');
-        this.loaded = true;
-        this.data = data;
+        console.log('data', data);
+        this.setState({ loaded: true, data });
         // alert('Data: ' + data + '\nStatus: ' + status);
       }
     );
@@ -32,10 +37,72 @@ class App extends Component {
   }
   render() {
     let result;
-    if (!this.loaded) {
+    if (!this.state.loaded) {
       result = (
         <div className="loading btn btn-sm btn-primary">Vérification</div>
       );
+    } else {
+      if (this.state.data.fact < 0.4) {
+        result = (
+          <div className="result-container">
+            <div className="btn btn-sm btn-danger mr-1">FAKE</div>
+            <button className="btn btn-sm btn-success mr-1">
+              <i className="fas fa-thumbs-up"></i>
+            </button>
+            <button className="btn btn-sm btn-info mr-1">
+              <i className="fas fa-thumbs-down"></i>
+            </button>
+          </div>
+        );
+      } else if (this.state.data.fact >= 0.50 && this.state.data.fact < 0.80) {
+        let sourceContainer;
+        let sources = [];
+        for (const source of this.state.data.sources) {
+          sources.push(<p>{source}</p>);
+        }
+        sourceContainer = <div className="sources">{sources}</div>;
+        result = (
+          <div className="container">
+            <div className="result-container">
+              <div className="btn btn-sm btn-info mr-1">
+                LOOKS GOOD
+              </div>
+              <button className="btn btn-sm btn-success mr-1">
+                <i className="fas fa-thumbs-up"></i>
+              </button>
+              <button className="btn btn-sm btn-info mr-1">
+                <i className="fas fa-thumbs-down"></i>
+              </button>
+            </div>
+            <p>Sources:</p>
+            {sourceContainer}
+          </div>
+        );
+      } else {
+        let sourceContainer;
+        let sources = [];
+        for (const source of this.state.data.sources) {
+          sources.push(<p>{source}</p>);
+        }
+        sourceContainer = <div className="sources">{sources}</div>;
+        result = (
+          <div className="container">
+            <div className="result-container">
+              <div className="btn btn-sm btn-success mr-1">
+                FACT
+              </div>
+              <button className="btn btn-sm btn-success mr-1">
+                <i className="fas fa-thumbs-up"></i>
+              </button>
+              <button className="btn btn-sm btn-info mr-1">
+                <i className="fas fa-thumbs-down"></i>
+              </button>
+            </div>
+            <p>Sources:</p>
+            {sourceContainer}
+          </div>
+        );
+      }
     }
     return (
       <div className="container">
