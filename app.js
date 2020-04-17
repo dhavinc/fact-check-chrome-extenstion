@@ -4,11 +4,27 @@ import $ from 'jquery';
 // Component to inject on select
 // const TestComponent = () => <h1>I am dynamically added!</h1>;
 class App extends Component {
+	sendSelection() {
+		$.post("http://localhost:4200",
+		{
+			term: this.props.selection
+		},
+		(data, status) => {
+			alert("Data: " + data + "\nStatus: " + status);
+		});
+	}
+	testapi() {
+		console.log('not yet');
+		$.get('http://localhost:4200', (data, status) => {
+			console.log(data);
+		});
+	}
 	componentDidMount() {
 		console.log('this props', this.props.selection);
+		this.sendSelection();
 	}
 	render() {
-		return <button>3asba</button>
+		return <button onClick={this.testapi}>3asba</button>
 	}
 }
 
