@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
+import './app.css';
 // Component to inject on select
-// const TestComponent = () => <h1>I am dynamically added!</h1>;
 class App extends Component {
 	sendSelection() {
 		$.post("http://localhost:4200",
@@ -24,7 +24,7 @@ class App extends Component {
 		this.sendSelection();
 	}
 	render() {
-		return <button onClick={this.testapi}>3asba</button>
+		return <div className="result btn btn-primary">Primary</div>
 	}
 }
 

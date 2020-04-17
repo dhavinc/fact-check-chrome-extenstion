@@ -19,7 +19,9 @@
     "@babel/preset-react": "latest",
     "babel-loader": "^8.1.0",
     "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "css-loader": "^3.5.2",
+    "style-loader": "^1.1.4"
   },
   "keywords": [],
   "author": "",
