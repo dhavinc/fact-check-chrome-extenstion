@@ -11,9 +11,21 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from parsel import Selector
+
 class Scraper : 
 	site_fiable = ["www.tunisianet.com.tn",
+	"www.lapresse.ca/",
 	"www.rtci.tn",
+	"www.aa.com.tr",
+	"www.ouest-france.fr",
+	"www.leparisien.fr",
+	"www.lesoleil.com",
+	"www.lefigaro.fr",
+	"www.bfmtv.com",
+	"www.lemonde.fr",
+	"www.huffingtonpost.fr",
+	"www.sciencesetavenir.fr",
+	"sante.journaldesfemmes.fr",
 	"www.santetunisie.rns.tn",
 	"tn.usembassy.gov",
 	"www.businessnews.com.tn",
@@ -36,6 +48,11 @@ class Scraper :
 	"covid-19.tn",
 	"www.radiokef.tn",
 	"www.ifm.tn",
+	"www.cnn.com",
+	"www.bbc.com",
+	"www.politico.com",
+	"www.washingtonpost.com"
+	"www.independent.co.uk",
 	"www.radiosfax.tn",
 	"www.radiotataouine.tn",
 	]
@@ -79,7 +96,7 @@ class Scraper :
 		date = "w" # from one week ( valeur de as_qdr)
 		position = "title" # emplacement des mots dans la page
 		#lien = "https://www.google.com/advanced_search?q=x&hl=fr"
-		lien = "https://www.google.com/search?hl="+ch_lang.lower()+"&as_q="+ch+"&cr="+country+"&as_qdr="+date #"&as_occt="+ position
+		lien = "https://www.google.com/search?hl="+ch_lang.lower()+"&as_q="+ch+"&as_qdr="+date #"&as_occt="+ position
 
 		# print("\n start scraping...")
 		options = webdriver.ChromeOptions()
