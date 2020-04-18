@@ -2,7 +2,7 @@ from scraper import Scraper
 from langdetect import detect
 import sys
 import json
-from helperF import Helper
+#from helperF import Helper
 
 
 testingArticles = [
@@ -22,7 +22,7 @@ articlePath = "Articles/"+testingArticles[3]
 
 def main(): 
 
-	#ch = sys.argv[1]
+	ch = sys.argv[1]
 
 	try:
 		ch_lang = detect(ch)
@@ -39,10 +39,11 @@ def main():
 	## helper est la classe responsable de la classification
 	## pour le moment l'input est un fichier 
 	##! un pb avec l'input en arabe en tant qu'argument
-	helper = Helper()
+	'''helper = Helper()
 	content = open(articlePath, 'r' , encoding= 'utf-8').read()
 	categorie = helper.main(content)
-	print(categorie)
+	print(categorie)'''
+
 
 
 	# print("\n*****************************************")
