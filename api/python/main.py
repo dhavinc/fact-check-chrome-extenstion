@@ -22,7 +22,7 @@ articlePath = "Articles/"+testingArticles[3]
 
 def main(): 
 
-	#ch = sys.argv[1]
+	ch = sys.argv[1]
 
 	try:
 		ch_lang = detect(ch)

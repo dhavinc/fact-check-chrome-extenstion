@@ -42,19 +42,19 @@ class App extends Component {
         <div className="loading btn btn-sm btn-primary">Vérification</div>
       );
     } else {
-      if (this.state.data.fact < 0.4) {
+      if (this.state.data.fact < 0.3) {
         result = (
           <div className="result-container">
             <div className="btn btn-sm btn-danger mr-1">FAKE</div>
-            <button className="btn btn-sm btn-success mr-1">
+            {/* <button className="btn btn-sm btn-success mr-1">
               <i className="fas fa-thumbs-up"></i>
             </button>
             <button className="btn btn-sm btn-info mr-1">
               <i className="fas fa-thumbs-down"></i>
-            </button>
+            </button> */}
           </div>
         );
-      } else if (this.state.data.fact >= 0.50 && this.state.data.fact < 0.80) {
+      } else if (this.state.data.fact >= 0.3 && this.state.data.fact < 0.80) {
         let sourceContainer;
         let sources = [];
         for (const source of this.state.data.sources) {
@@ -67,12 +67,12 @@ class App extends Component {
               <div className="btn btn-sm btn-info mr-1">
                 LOOKS GOOD
               </div>
-              <button className="btn btn-sm btn-success mr-1">
+              {/* <button className="btn btn-sm btn-success mr-1">
                 <i className="fas fa-thumbs-up"></i>
               </button>
               <button className="btn btn-sm btn-info mr-1">
                 <i className="fas fa-thumbs-down"></i>
-              </button>
+              </button> */}
             </div>
             <p>Sources:</p>
             {sourceContainer}
@@ -91,12 +91,12 @@ class App extends Component {
               <div className="btn btn-sm btn-success mr-1">
                 FACT
               </div>
-              <button className="btn btn-sm btn-success mr-1">
+              {/* <button className="btn btn-sm btn-success mr-1">
                 <i className="fas fa-thumbs-up"></i>
               </button>
               <button className="btn btn-sm btn-info mr-1">
                 <i className="fas fa-thumbs-down"></i>
-              </button>
+              </button> */}
             </div>
             <p>Sources:</p>
             {sourceContainer}
@@ -114,9 +114,6 @@ class App extends Component {
 }
 
 window.addEventListener('load', function () {
-  console.log('loaded');
-  // Specifies the element we want to watch
-  // const watch = document.getElementById('target-test');
   $(function () {
     $(document.body).bind('mouseup', function (e) {
       let selection;
@@ -133,33 +130,8 @@ window.addEventListener('load', function () {
       if (selection && selection.toString() !== '') {
         app(selection.toString(), parentNode);
       }
-      // selection.toString() !== '' &&
-      // alert(
-      //   '"' +
-      //     selection.toString() +
-      //     '" was selected at ' +
-      //     e.pageX +
-      //     '/' +
-      //     e.pageY
-      // );
     });
   });
-  // // Creates a new Mutation Observer
-  // const observer = new MutationObserver((mutationList, observer) => {
-  //   for (const mutation of mutationList) {
-  //     if (mutation.type === 'childList') {
-  //       const target = watch.querySelector('p');
-  //       if (target) {
-  //         app(observer, target);
-  //       }
-  //     }
-  //   }
-  // });
-
-  // // Starts observing the child list of the element
-  // observer.observe(watch, {
-  //   childList: true,
-  // });
 });
 
 const app = (selection, target) => {
