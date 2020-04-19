@@ -48,5 +48,10 @@ Un petit exemple de classification:
 |    Naive Bayes   |    0.89        | 0.87          | 0.88           |
 
 ## Credits
-- Team mate: [Cherni Oussama](https://www.linkedin.com/in/cherni-oussama-b593b415a/)
-- Team mate: [Fadhlaoui Meher](https://www.linkedin.com/in/meher-fadhleoui-2a539618b/)
+- Team: 
+
+[Messaoudi DhiaEddine](https://www.linkedin.com/in/dhiaeddine-messaoudi/)
+
+[Cherni Oussama](https://www.linkedin.com/in/cherni-oussama-b593b415a/)
+
+[Fadhlaoui Meher](https://www.linkedin.com/in/meher-fadhleoui-2a539618b/)
