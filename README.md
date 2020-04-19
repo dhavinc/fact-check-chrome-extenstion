@@ -26,11 +26,15 @@ dans le cas ou il s'agit d'un intox, le script detecte à l'aide de l'IA  le th�
 # Classification des articles
 
 Concernant la détection du thème de l'article , on a développer 3 modèles (DT, SVM,NB)  , permettant de analyser à chaque fois l'input et de retourner à quelle catégorie il appartient.
+
 Les differentes catégories de notre base de données : 
+
 ![alt text](https://imgur.com/0SJAcFu.png)
 
 
 Un petit exemple de classification: 
+
+
 ![alt text](https://imgur.com/REmB6OL.png)
 
 
