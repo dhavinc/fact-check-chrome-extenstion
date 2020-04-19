@@ -1,6 +1,6 @@
 # Intox Buster
 
-https://intox-buster.firebaseapp.com/
+https://intoxbuster.dhia.tn/
 
 ![alt text](https://imgur.com/80GOj6N.png)
 
