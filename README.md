@@ -29,8 +29,8 @@ Concernant la détection du thème de l'article , on a développer 3 modèles (D
 Les differentes catégories de notre base de données : 
 ![alt text](https://imgur.com/0SJAcFu.png)
 
-Un petit exemple de classification: 
 
+Un petit exemple de classification: 
 ![alt text](https://imgur.com/REmB6OL.png)
 
 
