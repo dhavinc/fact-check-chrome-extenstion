@@ -47,6 +47,26 @@ Un petit exemple de classification:
 |    SVM (SGD)     |    0.94        | 0.94          | 0.94           |
 |    Naive Bayes   |    0.89        | 0.87          | 0.88           |
 
+## Comment installer Intox Buster ?
+
+1- Telécharger le fichier .zip
+
+2- Consulter votre bibliothèque d'extensions : chrome://extensions/
+
+3- Activer le 'Mode développeur'
+
+![alt text](https://imgur.com/dHJpgTM.png)
+
+
+4- sélectionner 'charger l'extension non empaquetée'
+
+![alt text](https://imgur.com/QJulU8D.png)
+
+5- selectionner le dossier 'dist'
+
+![alt text](https://imgur.com/F2imbQi.png)
+
+
 ## Credits
 - Team: 
 
